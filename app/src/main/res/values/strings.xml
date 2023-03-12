@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Adivina el número</string>
+    <string name="activity_splash_text_view_adivina_el_numero">Adivina el número</string>
+    <string name="activity_main_text_view_escoger_numero">Adivinar un número entre 1 y </string>
+    <string name="activity_main_button_generar_numero_secreto">Generar número secreto</string>
+    <string name="activity_main_text_view_numero_no_generado">El número secreto no se ha generado</string>
+    <string name="activity_main_text_view_el_numero_secreto_es">El número secreto es: </string>
+    <string name="activity_main_button_adivinar">Adivinar</string>
+    <string name="activity_main_button_jugar_de_nuevo">Jugar de nuevo</string>
+</resources>
