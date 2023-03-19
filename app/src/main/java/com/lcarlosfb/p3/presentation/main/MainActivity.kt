@@ -19,8 +19,10 @@ class MainActivity : AppCompatActivity() {
 		setContentView(view)
 
 		mainBinding.btnGenerarNum.setOnClickListener {
+
 			mainBinding.edtAdivinar.setText("")
 			mainBinding.tvResultado.setText("")
+
 			val nrInput = mainBinding.edtNumber.text.toString()
 
 			if (nrInput.isEmpty()) {
@@ -84,3 +86,5 @@ class MainActivity : AppCompatActivity() {
 		}
 	}
 }
+
+//Punto 3 de la version 1.0 terminado
