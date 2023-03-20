@@ -78,6 +78,8 @@ class MainViewModel : ViewModel() {
 			salidaColorAdivinar.value = "#008000"
 			lastOptionAdivinar.value = false
 			nextOptionAdivinar.value = true
+			contador=0 //Correcion contador de intentos
 		}
+
 	}
 }
