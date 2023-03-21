@@ -53,6 +53,7 @@ class MainViewModel : ViewModel() {
 			lastOptionGen.value = false
 			nextOptionGen.value = true
 		}
+
 	}
 
 	fun adivinar(nrInputAdivinar:String){

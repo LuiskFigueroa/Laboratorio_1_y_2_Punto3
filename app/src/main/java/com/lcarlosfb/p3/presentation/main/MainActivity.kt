@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
 	private lateinit var mainBinding: ActivityMainBinding
 	private lateinit var mainViewModel : MainViewModel
 
+	private var nrInput = ""
+	private var nrInputAdivinar= ""
+
 	@SuppressLint("SetTextI18n")
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 		mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
 		val view = mainBinding.root
 		setContentView(view)
+
 
 		val msgToast = Observer<String>{toastError->
 			Toast.makeText(applicationContext,toastError,Toast.LENGTH_SHORT).show()
@@ -71,21 +75,21 @@ class MainActivity : AppCompatActivity() {
 		mainViewModel.nextOptionAdivinar.observe(this, nextViewAdivinar)
 
 
-
 		mainBinding.btnGenerarNum.setOnClickListener {
 
-			val nrInput = mainBinding.edtNumber.text.toString()
+			nrInput = mainBinding.edtNumber.text.toString()
 			mainViewModel.genNumber(nrInput)
-
-			mainBinding.btnAdivinar.setOnClickListener {
-				val nrInputAdivinar = mainBinding.edtAdivinar.text.toString()
-				mainViewModel.adivinar(nrInputAdivinar)
-
-				mainBinding.btnReset.setOnClickListener {
-					reset()
-				}
-			}
 		}
+
+		mainBinding.btnAdivinar.setOnClickListener {
+			nrInputAdivinar = mainBinding.edtAdivinar.text.toString()
+			mainViewModel.adivinar(nrInputAdivinar)
+		}
+
+		mainBinding.btnReset.setOnClickListener {
+			reset()
+		}
+
 	}
 
 	@SuppressLint("SetTextI18n")
